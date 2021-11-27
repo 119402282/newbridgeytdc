@@ -1,0 +1,514 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Courses - YTDC Newbridge</title>
+	<link rel="icon" href="images/icon.png">
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/2d07d354f4.js" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="jumbotron-fluid">
+		<img class="banner" src="images/banner.png" width="100%">
+		<img class="banner1" src="images/banner1.png" width="100%">
+		<img class="banner2 d-none" src="images/banner2.png" width="100%">
+	</div>
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item text-uppercase"><a class="nav-link" href="index.html">Home</a></li>
+				<li class="nav-item text-uppercase"><a class="nav-link" href="news.html">News</a></li>
+				<li class="nav-item dropdown text-uppercase">
+					<a class="nav-link dropdown-toggle active" href="./courses.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Courses <span class="sr-only">(current)</span></a>
+					<div class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown"> <!--mega-menu-->
+						<div class="row">
+							<div class="col-md-6 col-sm-12">
+								<a href="./prospectus.html"><p>PROSPECTUS</p></a>
+								<a href="courses.html#headingOne"><p>GENERAL LEARNING</p></a>
+								<a href="courses.html#headingTwo"><p>CATERING &amp; HOSPITALITY</p></a>
+								<a href="courses.html#headingThree"><p>HAIR &amp; BEAUTY</p></a>
+							</div>
+							<div class="col-md-6 col-sm-12">
+								<a href="courses.html#headingFour"><p>CHILD CARE</p></a>
+								<a href="courses.html#headingFive"><p>HEALTH &amp; FITNESS</p></a>
+								<a href="courses.html#headingSix"><p>CRAFT SKILLS / ENGINEERING</p></a>
+								<a href="courses.html#headingSeven"><p>COMPUTER &amp; OFFICE SKILLS</p></a>
+							</div>
+							<!--div class="col-md-3 col-sm-6">
+								<h4 class="sub-menu-heading">Level 5</h4>
+								<p><a href="#">CHILDHOOD STUDIES (WITH SPECIAL NEEDS AND DRAMA) LEVEL 5</a></p>
+								<p><a href="#">QQI LEVEL 5 CERTIFICATE IN ANIMAL CARE</a></p>
+								<p><a href="#">BEAUTY THERAPY AND MAKEUP ARTISTRY (LEVEL 5)</a></p>
+								<p><a href="#">ADVANCED CERTIFICATE IN FINE ART (WITH ANIMATION OPTIONS*)(LEVEL 6)</a></p>
+								<p><a href="#">HAIRDRESSING WITH BARBERING TECHNIQUES (LEVEL 5)</a></p>
+								<p><a href="#">HAIRDRESSING AND BARBERING TECHNIQUES (LEVEL 6)</a></p>
+								<p><a href="#">MEDIA STUDIES</a></p>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<h4 class="sub-menu-heading">Level 6</h4>
+								<p><a href="#">ART, CRAFT AND DESIGN – GRENNAN MILL CRAFT SCHOOL</a></p>
+								<p><a href="#">ADVANCED CRAFT STUDIES – GRENNAN MILL CRAFT SCHOOL</a></p>
+								<p><a href="#">ADVANCED BEAUTY THERAPY (WITH MAKEUP ARTISTRY AND SPA THERAPY)</a></p>
+								<p><a href="#">HEALTH SERVICE SKILLS (WITH OPTIONAL EMT)</a></p>
+								<p><a href="#">YOUTH WORK AND ADDICTION STUDIES</a></p>
+								<p><a href="#">ADVANCED SOCIAL STUDIES *NEW FOR 2020*</a></p>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<h4 class="sub-menu-heading">Art, Beauty, Hairdressing</h4>
+								<p><a href="#">SOFTWARE AND APP DEVELOPMENT (WITH WEB DESIGN)</a></p>
+								<p><a href="#">OFFICE ADMINISTRATION (WITH MEDICAL TERMINOLOGY)</a></p>
+								<p><a href="#">TOURISM AND BUSINESS</a></p>
+								<p><a href="#">BUSINESS INFORMATION SYSTEMS</a></p>
+								<p><a href="#">COMMUNITY CARE (WITH SOCIAL STUDIES)</a></p>
+								<p><a href="#">NURSING STUDIES</a></p>
+								<p><a href="#">SECURITY STUDIES (WITH CRIMINOLOGY)</a></p>
+							</div>
+							<div class="col-md-3 col-sm-6">
+								<h4 class="sub-menu-heading">Business, Tech, Media</h4>
+								<p><a href="#">FINE ART – PORTFOLIO PREPARATION</a></p>
+								<p><a href="#">ART WITH ANIMATION STUDIES</a></p>
+								<p><a href="#">EARLY CHILDHOOD EDUCATION WITH SPECIAL NEEDS ASSISTING (LEVEL 6)</a></p>
+								<p><a href="#">EDUCATION AND TRAINING (WITH PSYCHOLOGY) *NEW FOR 2020*</a></p>
+								<p><a href="#">EXERCISE AND HEALTH FITNESS</a></p>
+								<p><a href="#">APPLIED PSYCHOLOGY *NEW FOR 2020*</a></p>
+							</div-->
+						</div>
+					</div>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="gallery.html">PHOTO GALLERY</a></li>
+				<li class="nav-item dropdown text-uppercase">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">POLICIES & ADMISSIONS</a>
+					<div class="dropdown-menu single-menu" aria-labelledby="navbarDropdown">
+						<div class="row">
+							<div class="col-lg-12">
+							<a href="./policies.html#policy"><p>POLICY STATEMENT</p></a>
+							<a href="./policies.html#entry"><p>ENTRY REQUIREMENTS</p></a>
+							<a href="./application.html" target="_blank"><p>APPLICATION FORM</p></a>
+							<a href="./policies.html#app-proc"><p>APPLICATION AND ADMISSIONS PROCEDURES</p></a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="./mission.html">MISSION STATEMENT</a></li>	
+				<li class="nav-item text-uppercase"><a class="nav-link" href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<br>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-6 col-sm-8 text-uppercase padding">
+				<h1 id="headingOne">Our Courses</h1> <!--*Our Latest News-->
+				<br>
+				<br>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
+				<p>For more information on the courses detailed below check out our complete prospectus <a href="./prospectus.html" target="_blank">here</a>.</p>
+				<br>
+				<br>
+				<div class="card">
+					<div class="card-header f67b14">
+						<h4 class="mb-0">
+							GENERAL LEARNING
+						</h4>
+					</div>
+					<div id="collapseOne" class="collapse show" aria-labelledby="headingOne">
+						<div class="card-body row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>PROGRAMME DESCRIPTION</h5>	
+										<p>This is a full-time programme that prepares students to work in a range of settings within General workplace Industry.</p>
+										<br>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<h5>COMPONENT AWARDS</h5>
+										<ul class="list-unstyled">
+											<li>Communications</li>
+											<li>Maths</li>
+											<li>Word Processing</li>
+											<li>Career Preparation</li>
+											<li>Personal and Interpersonal Skills</li>
+											<li>Personal Care and Presentation</li>
+											<li>Manual Arc Welding</li>
+											<li>Hairdressing</li>
+											<li>Health and Safety Awareness</li>
+											<li>Food and Nutrition</li>
+											<li>Ceramics</li>
+											<li>Craft Sewing</li>
+										</ul>
+										<h5>PROGRESSION</h5>
+										<p>Entry to QQI Level 4</p>
+										<br>
+									</div>
+									<div class="col-lg-8 course-img d-flex">
+										<img src="./images/gl-2.png" height="auto">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="headingTwo"></div>
+				</div>
+				<div class="card">
+					<div class="card-header f6b314">
+						<h4 class="mb-0">
+							CATERING <span class="text-nowrap">&amp; HOSPITALITY</span>
+						</h4>
+					</div>
+					<div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo">
+						<div class="card-body row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>PROGRAMME DESCRIPTION</h5>
+										<p>This is a full-time programme that prepares students to work in a range of settings within the Catering and Hospitality Industry.</p>
+										<br>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<h5>COMPONENT AWARDS</h5>
+										<ul class="list-unstyled">
+											<li>Communications</li>
+											<li>Maths</li>
+											<li>Work Experience</li>
+											<li>Personal Effectiveness</li>
+											<li>Information Technology</li>
+											<li>Short Order Cooking</li>
+											<li>Meal Service &amp; Kitchen Skills</li>
+											<li>Workplace Safety</li>
+											<li>Food &amp; Hygiene Level 2</li>
+											<li>First Aid</li>
+										</ul>
+										<h5>PROGRESSION</h5>
+										<p>Direct entry to the industry with opportunities to progress to Further Education and Training.</p>
+										<br>
+									</div>
+									<div class="col-lg-8 course-img d-flex">
+										<img src="./images/ch-2.png" height="auto">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="headingThree"></div>
+				</div>
+				<div class="card">
+					<div class="card-header bg-830f34">
+						<h4 class="mb-0">
+							HAIR &amp; BEAUTY
+						</h4>
+					</div>
+					<div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
+						<div class="card-body row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>PROGRAMME DESCRIPTION</h5>
+										<p>This is a full-time programme that prepares students to work in a range of settings within the Hair and Beauty Industry.</p>
+										<br>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<h5>COMPONENT AWARDS</h5>
+										<ul class="list-unstyled">
+											<li>Communications</li>
+											<li>Maths</li>
+											<li>Work Experience</li>
+											<li>Personal Effectiveness</li>
+											<li>Information Technology</li>
+											<li>Workplace Safety / First Aid</li>
+											<li>Biology</li>
+											<li>Roller Setting</li>
+											<li>Reception &amp; Shampooing</li>
+											<li>Customer Service</li>
+										</ul>
+										<h5>PROGRESSION</h5>
+										<p>Direct entry to the industry with opportunities to progress to Further Education and Training.</p>
+										<br>
+									</div>
+									<div class="col-lg-8 course-img d-flex">
+										<img src="./images/hb-2.png" height="auto">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="headingFour"></div>
+				</div>
+				<div class="card">
+					<div class="card-header bb3073">
+						<h4 class="mb-0">
+							CHILD CARE
+						</h4>
+					</div>
+					<div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
+						<div class="card-body row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>PROGRAMME DESCRIPTION</h5>
+										<p>This is a full-time programme that prepares students to work in a range of settings within the Childcare Industry.</p>
+										<br>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<h5>COMPONENT AWARDS</h5>
+										<ul class="list-unstyled">
+											<li>Communications</li>
+											<li>Maths</li>
+											<li>Work Experience</li>
+											<li>Personal Effectiveness</li>
+											<li>Information Technology</li>
+											<li>Workplace Safety</li>
+											<li>Child Development &amp; Play</li>
+											<li>Child Safety</li>
+											<li>Nutrition  &amp; Healthy Options</li>
+											<li>First Aid</li>
+											<li>Foundation of Safe Guarding</li>
+										</ul>
+										<h5>PROGRESSION</h5>
+										<p>Direct entry to the industry with opportunities to progress to Further Education and Training.</p>
+										<br>
+									</div>
+									<div class="col-lg-8 course-img d-flex">
+										<img src="./images/cc-2.png" height="auto">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="headingFive"></div>
+				</div>
+				<div class="card">
+					<div class="card-header bg-474747">
+						<h4 class="mb-0">
+							HEALTH &amp; FITNESS
+						</h4>
+					</div>
+					<div id="collapseFour" class="collapse show" aria-labelledby="headingFour">
+						<div class="card-body row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>PROGRAMME DESCRIPTION</h5>
+										<p>This is a full-time programme that prepares students to work in a range of settings within the Health and Fitness Industry.</p>
+										<br>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<h5>COMPONENT AWARDS</h5>
+										<ul class="list-unstyled">
+											<li>Communications</li>
+											<li>Maths</li>
+											<li>Work Experience</li>
+											<li>Personal Effectiveness</li>
+											<li>Information Technology</li>
+											<li>Workplace Safety</li>
+											<li>Biology</li>
+											<li>H.R.F.</li>
+											<li>Nutrition  &amp; Healthy Options</li>
+											<li>First Aid</li>
+											<li>Coaching &amp; Referees beginner course</li>
+										</ul>
+										<h5>PROGRESSION</h5>
+										<p>Direct entry to the industry with opportunities to progress to Further Education and Training.</p>
+										<br>
+									</div>
+									<div class="col-lg-8 course-img d-flex">
+										<img src="./images/hf-2.png" height="auto">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="headingSix"></div>
+				</div>
+				<div class="card">
+					<div class="card-header f67b14">
+						<h4 class="mb-0 text-left">
+							CRAFT SKILLS / ENGINEERING
+						</h4>
+					</div>
+					<div id="collapseThree" class="collapse show" aria-labelledby="headingThree">
+						<div class="card-body row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>PROGRAMME DESCRIPTION</h5>
+										<p>This is a full-time programme that prepares students to work in a range of settings within the Engineering Industry.</p>
+										<br>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<h5>COMPONENT AWARDS</h5>
+										<ul class="list-unstyled">
+											<li>Communications</li>
+											<li>Maths</li>
+											<li>Work Experience</li>
+											<li>Personal Effectiveness</li>
+											<li>Information Technology</li>
+											<li>Workplace Safety</li>
+											<li>Metal Craft</li>
+											<li>Manual Arc Welding / MIG Welding</li>
+											<li>Engineering Workshop processes</li>
+											<li>Manual Handling</li>
+											<li>Safe Pass</li>
+											<li>First Aid</li>
+										</ul>
+										<h5>PROGRESSION</h5>
+										<p>Direct entry to the industry with opportunities to progress to Further Education and Training.</p>
+										<br>
+									</div>
+									<div class="col-lg-8 course-img d-flex">
+										<img src="./images/ce-2.png" height="auto">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="headingSeven"></div>
+				</div>
+				<div class="card">
+					<div class="card-header f6b314">
+						<h4 class="mb-0">
+							COMPUTER <span class="text-nowrap">&amp; OFFICE SKILLS</span>
+						</h4>
+					</div>
+					<div id="collapseFive" class="collapse show" aria-labelledby="headingFive">
+						<div class="card-body row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-lg-12">
+										<h5>PROGRAMME DESCRIPTION</h5>
+										<p>This is a full-time programme that prepares students to work in a range of settings within the I.T. Industry.</p>
+										<br>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-lg-4">
+										<h5>COMPONENT AWARDS</h5>
+										<ul class="list-unstyled">
+											<li>Communications</li>
+											<li>Maths</li>
+											<li>Work Experience</li>
+											<li>Personal Effectiveness</li>
+											<li>Information Technology</li>
+											<li>Computer Applications</li>
+											<li>Reception &amp; Office Skills</li>
+											<li>Customer Service</li>
+											<li>Workplace Safety</li>
+										</ul>
+										<h5>PROGRESSION</h5>
+										<p>Direct entry to the industry with opportunities to progress to Further Education and Training.</p>
+										<br>
+									</div>
+									<div class="col-lg-8 course-img d-flex">
+										<img src="./images/cs-2.png" height="auto">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<br>
+	<footer class="page-footer gray padding">
+		<br>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 footer-socials">
+					<div class="justifyable-h5">
+						<h5 class="text-uppercase"><span class="text-nowrap">Social  Media</span></h5>
+					</div>
+					<div class="justifyable-icons">
+						<a href="https://www.facebook.com/newbridgeYTDC" target="_blank"><i class="fab fa-facebook fa-5x social"></i></a>
+						<a href="https://twitter.com/NewbridgeYtdc?ref_src=twsrc%5Etfw" target="_blank"><i class="fab fa-twitter fa-5x social" aria-hidden="true"></i></a>
+						<a href="https://www.instagram.com/newbridgeytdc/" target="_blank"><i class="fab fa-instagram fa-5x social" aria-hidden="true"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-5 col-md-6 footer-contacts">
+					<div class="d-flex justify-content-center">
+						<h5 class="text-uppercase pr-5 mr-5"><span class="text-nowrap">Contact Details</span></h5>
+					</div>
+					<div class="d-flex justify-content-center">
+						<ul class="list-unstyled text-normal">
+							<li>
+								<p><span class="border-bottom border-color-light pr-1 pb-1">TEL:</span> +353 45 432372</p>
+							</li>
+							<li>
+								<p><span class="border-bottom border-color-light pr-1 pb-1">EMAIL:</span> &nbsp;youthbridge2016@gmail.com</p>
+							</li>
+							<li>
+								<p><span class="border-bottom border-color-light pr-1 pb-1">ADDRESS: </span>  
+									<ul class="list-unstyled"> 
+										<li>Cill Dara Industrial Estate, Unit DE,</li>
+										<li>Newbridge, Co. Kildare, W12 R244</li>
+									</ul>
+								</p>
+							</li>
+							<li>
+								<p><span class="border-bottom border-color-light pr-1 pb-1"> OFFICE ADMIN HOURS:</span>
+									<ul class="list-unstyled"> 
+										<li>Mon, Tues, Thurs 9.00am - 2.00pm</li>
+										<li>Wed, Fri 9.00am - 11.00am</li>
+									</ul>
+								</p>
+							</li>
+							<li>
+								<p><span class="border-bottom border-color-light pr-1 pb-1">CENTRE HOURS:</span>
+									<ul class="list-unstyled"> 
+										<li>Mon - Thurs 9.00am - 3.45pm</li>
+								    	<li>Fri 9.00am - 12.30pm</li>
+									</ul>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-12 footer-socials">
+					<h5 class="text-uppercase"><span class="text-nowrap">Affiliated Organisations</span></h5>
+					<span class="text-nowrap">
+						<a href="#!"><img src="images/kwetb.png" class="pb-1 aff-logos" width="50%"></a>
+						<a href="#!"><img src="images/solas.jpg" class="pb-1 aff-logos" width="50%"></a>
+					</span>
+					<span class="text-nowrap">
+						<a href="#!"><img src="images/edu.png" class="pb-1 aff-logos" width="50%"></a>
+						<a href="#!"><img src="images/qqi.jpg" class="pb-1 aff-logos" width="50%"></a>
+					</span>
+					<span class="text-nowrap">
+						<a href="#!"><img src="images/europe.png" class="pb-1 aff-logos" width="50%"></a>
+						<a href="#!"><img src="images/structuralFund.png" class="pb-1 aff-logos" width="50%"></a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<br>
+	</footer>
+</body>
+</html>
