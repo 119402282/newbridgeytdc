@@ -146,8 +146,16 @@ nav {
 	.course-img img {
 		width: 50%;
 		
-	height: auto;
+		height: auto;
 	}
+	.mission-head, .mission-btn{
+		font-size: 1.25rem;
+	}
+	
+	.mission-p {
+		font-size: 1rem;
+	}
+
 }
 /* scaling for xs devices*/
 @media(max-width: 660px){
