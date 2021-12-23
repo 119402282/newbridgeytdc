@@ -10,8 +10,9 @@
     <title>form</title>
 </head>
 <body>
+
     <form id="survey" class="container w-50 d-flex" style="position: absolute; top: 50%;left:50%; transform: translate(-50%, -50%); min-height: 50vh; flex-direction: column; gap: 3rem; justify-content: center;" method="post">
-        <h2>Survey</h2>
+        <h2><?= echo 'Survey ' . (4*4) ?></h2>
         <div class="hero-text">Please submit your name and phone number below to show your interest. We will be in touch with you soon.</div>
         <div class="form-floating mb-3">
             <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name" autocomplete="name" required />
