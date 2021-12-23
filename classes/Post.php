@@ -59,7 +59,7 @@
         }
         public function delete() {
             $query = 'DELETE FROM ' . $this->table_name . ' WHERE phone = ? AND full_name = ?';
-            
+            echo $query;
             $this->phone = htmlspecialchars(strip_tags($this->phone));
             $this->full_name = htmlspecialchars(strip_tags($this->full_name));
     
