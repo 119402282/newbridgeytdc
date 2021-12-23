@@ -50,7 +50,7 @@
             $stmt->bindParam(1, $this->phone);
             $stmt->bindParam(2, $this->full_name);
     
-            if($stmt->execute){
+            if($stmt->execute()){
                 return true;
             }
             // printf("Error: %s .\n", $stmt->error_log());
