@@ -8,14 +8,14 @@
     include_once '../classes/Post.php';
     include_once '../classes/Database.php';
 
-    $database = new Database();
-    $db = $database->connect();
-    $post = new Post($db);
-    $post->table = 'survey';
+    // $database = new Database();
+    // $db = $database->connect();
+    // $post = new Post($db);
+    // $post->table = 'survey';
 
-    $post->phone = $_POST['phone'];
-    $post->full_name = $_POST['fullname'];
+    // $post->phone = $_POST['phone'];
+    // $post->full_name = $_POST['fullname'];
     
-        echo json_encode(['message'=> 'phone: '. $post->phone . '\n' . 'full_name: ' . $post->full_name . '\n']);
-       
+    // echo json_encode(['message'=> 'phone: '. $post->phone . '\n' . 'full_name: ' . $post->full_name . '\n']);
+       echo '{"message": "Hello World"}';
 ?>
