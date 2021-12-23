@@ -1,9 +1,8 @@
 <?php
-    ini_set("include_path", '/home/n580414/php:' . ini_get("include_path") );
 
     class Database {
 
-        private $host = "localhost";
+        private $host = "localhost:3306";
         private $db_name = "n580414_ytdc-db";
         private $username = "n580414";
         private $password = "OUj10-A5;Q3ufc";

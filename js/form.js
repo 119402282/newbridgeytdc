@@ -1,9 +1,37 @@
 let id = 'survey';
 let urlPattern = 'api/create.php'
 let toast = document.getElementById('toast');
+
 const app = (input) => {
+    
+    
     let {message} = input;
-    alert(input);
+    alert(message);
+
+    //Write your code based on responses here
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 const encodeURI = (content) => new URLSearchParams(content).toString();
@@ -31,7 +59,6 @@ form.onsubmit = (event) => {
     event.preventDefault();
     let data = new FormData(form);
     postHTTP(data, urlPattern).then( message => {
-        alert("we got a reply");
         app(message);
         
     });
