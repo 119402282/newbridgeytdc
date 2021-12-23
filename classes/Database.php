@@ -1,4 +1,5 @@
 <?php
+    ini_set("include_path", '/home/n580414/php:' . ini_get("include_path") );
 
     class Database {
 
