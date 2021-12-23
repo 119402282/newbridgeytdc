@@ -17,5 +17,5 @@
     // $post->full_name = $_POST['fullname'];
     
     // echo json_encode(['message'=> 'phone: '. $post->phone . '\n' . 'full_name: ' . $post->full_name . '\n']);
-       echo '{"message": "Hello World"}';
+       echo json_encode(["message"=>"hello world"]);
 ?>
