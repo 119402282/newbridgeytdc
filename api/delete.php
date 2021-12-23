@@ -12,7 +12,6 @@
     $database = new Database();
     $db = $database->connect();
     $post = new Post($db);
-    $post->table = 'survey';
 
     // $_GET['']
     $data = json_decode(file_get_contents('php://input'));
