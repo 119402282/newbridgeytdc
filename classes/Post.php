@@ -29,7 +29,7 @@
     
         
             $stmt = $this->conn->prepare($query);
-            $stmt->bindParam(1, this->$id);
+            $stmt->bindParam(1, $this->id);
     
             $stmt->execute();
     
@@ -69,8 +69,8 @@
                 return false;
             }
             $stmt = $this->conn->prepare($query);
-            $stmt->bindParam(1, this->$phone);
-            $stmt->bindParam(2, this->$full_name);
+            $stmt->bindParam(1, $this->phone);
+            $stmt->bindParam(2, $this->full_name);
     
             if($stmt->execute){
                 return true;
