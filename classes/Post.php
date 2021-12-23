@@ -2,7 +2,7 @@
     
     ini_set("include_path", '/home/n580414/php:' . ini_get("include_path") );
 
-    public class Post {
+    class Post {
         private $conn;
         private $table = 'survey';
 
