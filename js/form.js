@@ -1,5 +1,5 @@
 let id = 'survey';
-let urlPattern = 'api/create.php'
+let urlPattern = 'api/delete.php'
 let toast = document.getElementById('toast');
 
 const app = (input) => {
