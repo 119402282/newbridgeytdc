@@ -75,7 +75,6 @@
             if($stmt->execute){
                 return true;
             }
-            printf("Error: %s .\n", $stmt->error);
             return false;
     
         }
