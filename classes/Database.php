@@ -2,7 +2,7 @@
 
     class Database {
 
-        private $host = "localhost:3306";
+        private $host = "localhost";
         private $db_name = "n580414_ytdc-db";
         private $username = "n580414";
         private $password = "OUj10-A5;Q3ufc";
@@ -15,6 +15,7 @@
                 $this->conn = new PDO('mysql:host='. $this->host . ';dbname='. $this->db_name . ';',
                 $this->username, $this->password);
                 $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                echo "Connected to db";
             } catch (PDOException $e) {
                 echo "Error connecting to database" . $e->getMessage();
             }
