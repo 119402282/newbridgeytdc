@@ -53,7 +53,7 @@
             if($stmt->execute){
                 return true;
             }
-            printf("Error: %s .\n", $stmt->error_log());
+            // printf("Error: %s .\n", $stmt->error_log());
             return false;
     
         }
