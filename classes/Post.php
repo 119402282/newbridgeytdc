@@ -62,10 +62,9 @@
             $this->phone = htmlspecialchars(strip_tags($this->phone));
             $this->full_name = htmlspecialchars(strip_tags($this->full_name));
     
-            $illegals = ['1',1,'*', ' ', '', null, 'null', 'TRUE', true, 'true', 'True'];
+            $illegals = ['1',1,'*', ' ', '', null, 'null', 'TRUE', 'true', 'True'];
     
             if(in_array($this->phone, $illegals) OR in_array($this->full_name, $illegals)){
-                echo "badd";
                 return false;
             }
             $stmt = $this->conn->prepare($query);
