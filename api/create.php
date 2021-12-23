@@ -13,7 +13,6 @@
     $database = new Database();
     $db = $database->connect();
     $post = new Post($db);
-    $post->table = 'survey';
 
     $post->phone = $_POST['phone'];
     $post->full_name = $_POST['fullname'];
