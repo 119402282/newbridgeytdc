@@ -2,6 +2,9 @@ let id = 'login';
 let urlPattern = 'api/read.php';
 let logCont = document.getElementById('login-container');
 const form = document.getElementById(id);
+form.onreset = (event) => {
+    event.preventDefault();
+};
 let resTable = document.getElementById('resultsTable');
 let result = document.querySelector('tbody');
 
@@ -65,11 +68,6 @@ const postHTTP = async (content, urlPattern) => {
     const message = await response.json();
     return message;
 };
-
-form.onreset = (event) => {
-    event.preventDefault();
-};
-
 
 form.onsubmit = (event) => {
     event.preventDefault();
