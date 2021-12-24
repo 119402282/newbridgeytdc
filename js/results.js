@@ -1,5 +1,5 @@
 let id = 'login';
-let urlPattern = 'api/read.php';
+let urlPattern = './../api/read.php';
 let logCont = document.getElementById('login-container');
 const form = document.getElementById(id);
 let resTable = document.getElementById('resultsTable');
