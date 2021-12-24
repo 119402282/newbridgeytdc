@@ -17,8 +17,8 @@
     $post->phone = $_POST['phone'];
     $post->full_name = $_POST['fullname'];
     if($post->create()){
-        echo json_encode(['message'=> 'Great your survey has been submitted successfully!']);
+        echo json_encode(['message'=> 'Thank you '. explode(' ', trim($post->full_name))[0].'your survey has been submitted successfully!']);
     }else{
-        echo json_encode(['message'=> 'Submission failed. Please try again later.']);
+        echo json_encode(['message'=> 'Submission failed. Please try again later. Or contact our email: youthbridge2016@gmail.com']);
     };
 ?>

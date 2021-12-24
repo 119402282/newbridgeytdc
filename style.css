@@ -143,6 +143,9 @@ nav {
 	}
 }
 @media(max-width: 1280px){
+	#survey-container > form {
+		width: 75% !important;
+	}
 	.course-img img {
 		width: 50%;
 		
@@ -159,6 +162,10 @@ nav {
 }
 /* scaling for xs devices*/
 @media(max-width: 660px){
+	#survey-container > form {
+		width: 100% !important;
+		margin-top: 6rem;
+	}
 
 	.mission-head, .mission-btn{
 		font-size: 1.25rem;
@@ -195,8 +202,14 @@ nav {
 	}
 }
 
-
 @media(max-width: 700px){
+	
+
+	#survey-container.w-100 > form {
+		width: 80% !important;
+		margin-top: 6rem !important;
+	}	
+
 	.justifyable-h5 {
 		display: flex;
 		justify-content: center;
@@ -424,3 +437,18 @@ padding: 10px 5% 30px 5%;
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
+
+
+#survey-container {
+	padding: 0; 
+	margin: 0;
+	display: grid;
+	place-items: center;
+	text-align: left;
+}
+#survey-container > form {
+	min-height: 50vh; 
+	flex-direction: column; 
+	gap: 3rem; 
+	justify-content: center;
+}

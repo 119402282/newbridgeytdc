@@ -20,6 +20,6 @@
     if($post->delete()){
         echo json_encode(['message'=> 'Data successfully deleted']);
     }else{
-        echo json_encode(['message'=> 'Failed to delete record. Please email cullenhenry2016@gmail.com to request manual data deletion.']);
+        echo json_encode(['message'=> 'Failed to delete record. Please email youthbridge2016@gmail.com to request manual data deletion.']);
     };
 ?>

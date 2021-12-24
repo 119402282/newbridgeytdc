@@ -6,12 +6,18 @@
 	<meta charset="utf-8"> 
 	<meta name="robots" content="index, follow">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	<!-- CSS only -->
+<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=NhVt_7LmZONgR9u-EbGJ43o52I_ZlRUwnuoNH2yZnBfZ-qWf7bfZJUXho4gvNZmvwLNMQ0c_-2xpH0gBsXYoZoM-JvzUY_x_0JtWToBJmU68F67WQRQz9G5d2Ssm8OocaFOEP_kfXSjmphdHRYIeZFc9vlOU4hYn_8TPP4V639Ya5hKQigEV78UwzTK30mxuu8DsHFYUHXeVgxhjuae91g" charset="UTF-8"></script><script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<script src="https://kit.fontawesome.com/2d07d354f4.js" crossorigin="anonymous"></script>
+	<script src="./js/form.js" type="text/javascript" defer></script>
 	<style>
 		.mission-btn {
 			-webkit-text-stroke: 0.1px #666666;
@@ -424,7 +430,23 @@
 		<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/p2DViEeyvxg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		<br>
 	</div>
-	
+	<div id="survey-container" class="container-fluid w-100 bb3073">
+		<form id="survey" class="w-50 d-flex px-5 py-5 my-5 center rounded">
+			<h2>Survey</h2>
+			<div class="hero-text">Please submit your name and phone number below to show your interest in Newbridge YTDC. We will be in touch with you as soon as we can.</div>
+			<div class="form-floating mb-3">
+				<input type="text" name="fullname" class="form-control" id="fullname" placeholder="Full Name" autocomplete="name" required />
+				<label for="fullname" class="text-secondary">Full Name</label>
+			</div>
+			<div class="form-floating">
+				<input type="tel" name="phone" class="form-control" id="phone" placeholder="08X XXX XXXX" autocomplete="tel-national" required />
+				<label for="phone" class="text-left text-secondary">Mobile number</label>
+			</div>
+			<div class="col-auto">
+				<button type="submit" class="btn mb-3 badge badge-pill fg-f67b14 text-center mission-btn">Submit Interest</button>
+			</div>
+		</form>
+	</div>
 	<div style="display: block; width: 100%; height: 3px; background-color: #990635;"></div>
 	<footer class="page-footer gray padding">
 		<br>
