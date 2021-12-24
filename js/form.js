@@ -1,5 +1,5 @@
 let id = 'survey';
-let urlPattern = 'api/create.php'
+let urlPattern = 'api/create.php';
 let toast = document.getElementById('toast');
 let survey = document.getElementById('survey-container');
 
