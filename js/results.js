@@ -7,16 +7,11 @@ let result = document.querySelector('tbody');
 
 const app = (input) => {
     
-    
     let {message} = input;
-    console.log("0" + message);
-    console.log("1" + input);
-    console.log("2" + {input});
-
     //Write your code based on responses here
     if(input['data'].length > 0) {
         result.innerHTML = input['data'].map((row) =>{
-            return '<tr><td>'+row.phone+'</td><td>'+full_name+'</td></tr>';
+            return '<tr><td>'+row.phone+'</td><td>'+row.full_name+'</td></tr>';
         });
         logCont.classList.toggle('d-none');
         resTable.classList.toggle('d-none');
