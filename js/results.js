@@ -21,19 +21,14 @@ const app = (input) => {
         result.innerHTML = input['data'].map((row) =>{
             return `<tr>
                         <td>${row.phone}</td>
-                        <td">${row.full_name}</td>
+                        <td>${row.full_name}</td>
                     </tr>`;
         }).join('\n');
-        console.log(input['data'].map((row) =>{
-            return `<tr>
-                        <td>${row.phone}</td>
-                        <td">${row.full_name}</td>
-                    </tr>`;
-        }).join('\n'));
+        console.table(input['data']);
         foot.innerHTML = "Total Responses: " + input['data'].length;
         logCont.classList.toggle('d-none');
         resTable.classList.toggle('d-none');
-        console.table({input});
+        form.reset();
     }
 
 
