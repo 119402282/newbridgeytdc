@@ -1,6 +1,7 @@
 let id = 'survey';
 let urlPattern = 'api/create.php'
 let toast = document.getElementById('toast');
+let survey = document.getElementById('survey-container');
 
 const app = (input) => {
     
@@ -9,7 +10,7 @@ const app = (input) => {
     alert(message);
 
     //Write your code based on responses here
-    
+    survey.classList.toggle('d-none');
     
 
 
