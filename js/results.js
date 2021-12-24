@@ -10,7 +10,14 @@ const app = (input) => {
     
     let {message} = input;
     //Write your code based on responses here
-    if(input['data'].length > 0) {
+    if(message === "Login failed!"){
+        alert(message);
+        form.reset();
+    } else if (message === "No posts found!") {
+        logCont.classList.toggle('d-none');
+        resTable.classList.toggle('d-none');
+        result.innerHTML = '<h2>No submissions yet.</h2>';
+    } else if(input['data'].length > 0) {
         result.innerHTML = input['data'].map((row) =>{
             return `<tr style="width: 100%;"><td>${row.phone}</td><td">${row.full_name}</td></tr>`;
         }).join('\n');
@@ -18,13 +25,6 @@ const app = (input) => {
         logCont.classList.toggle('d-none');
         resTable.classList.toggle('d-none');
         console.table({input});
-    } else if(message === "Login failed!"){
-        alert(message);
-        form.reset();
-    } else if (message === "No posts found!") {
-        logCont.classList.toggle('d-none');
-        resTable.classList.toggle('d-none');
-        result.innerHTML = '<h2>No submissions yet.</h2>';
     }
 
 
