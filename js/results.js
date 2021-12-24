@@ -24,6 +24,12 @@ const app = (input) => {
                         <td">${row.full_name}</td>
                     </tr>`;
         }).join('\n');
+        console.log(input['data'].map((row) =>{
+            return `<tr>
+                        <td>${row.phone}</td>
+                        <td">${row.full_name}</td>
+                    </tr>`;
+        }).join('\n'));
         foot.innerHTML = "Total Responses: " + input['data'].length;
         logCont.classList.toggle('d-none');
         resTable.classList.toggle('d-none');
