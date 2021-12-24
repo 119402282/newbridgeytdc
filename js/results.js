@@ -4,7 +4,7 @@ let logCont = document.getElementById('login-container');
 const form = document.getElementById(id);
 let resTable = document.getElementById('resultsTable');
 let result = document.querySelector('tbody');
-let foot = document.querySelector('tfoot>td');
+let foot = document.querySelector('tfoot td');
 
 const app = (input) => {
     
