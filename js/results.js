@@ -19,7 +19,10 @@ const app = (input) => {
         result.innerHTML = '<h2>No submissions yet.</h2>';
     } else if(input['data'].length > 0) {
         result.innerHTML = input['data'].map((row) =>{
-            return `<tr style="width: 100%;"><td>${row.phone}</td><td">${row.full_name}</td></tr>`;
+            return `<tr>
+                        <td>${row.phone}</td>
+                        <td">${row.full_name}</td>
+                    </tr>`;
         }).join('\n');
         foot.innerHTML = "Total Responses: " + input['data'].length;
         logCont.classList.toggle('d-none');
