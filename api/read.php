@@ -11,7 +11,7 @@
 
     $post = new Post($db);
 
-    if($_POST["user"] === "n580414" && $_POST["pass"] === "OUj10-A5;Q3ufc"){
+    if($_POST["username"] === "n580414" && $_POST["password"] === "OUj10-A5;Q3ufc"){
         $result = $post->read();
 
         $num_rows = $result->rowCount();
