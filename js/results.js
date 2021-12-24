@@ -4,6 +4,7 @@ let logCont = document.getElementById('login-container');
 const form = document.getElementById(id);
 let resTable = document.getElementById('resultsTable');
 let result = document.querySelector('tbody');
+let foot = document.querySelector('tfoot>td');
 
 const app = (input) => {
     
@@ -11,8 +12,9 @@ const app = (input) => {
     //Write your code based on responses here
     if(input['data'].length > 0) {
         result.innerHTML = input['data'].map((row) =>{
-            return '<tr><td>'+row.phone+'</td><td>'+row.full_name+'</td></tr>';
-        });
+            return `<tr style="display: flex; width: 100%;"><td style="flex-grow: 1;">${row.phone}</td><td style="flex-grow: 1;">${row.full_name}</td></tr>`;
+        }).join('\n');
+        foot.innerHTML = "Total Responses: " + input['data'].length;
         logCont.classList.toggle('d-none');
         resTable.classList.toggle('d-none');
         console.table({input});
