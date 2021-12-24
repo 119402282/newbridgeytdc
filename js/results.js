@@ -12,7 +12,7 @@ const app = (input) => {
     //Write your code based on responses here
     if(input['data'].length > 0) {
         result.innerHTML = input['data'].map((row) =>{
-            return `<tr style="display: flex; width: 100%;"><td style="flex-grow: 1;">${row.phone}</td><td style="flex-grow: 1;">${row.full_name}</td></tr>`;
+            return `<tr style="width: 100%;"><td>${row.phone}</td><td">${row.full_name}</td></tr>`;
         }).join('\n');
         foot.innerHTML = "Total Responses: " + input['data'].length;
         logCont.classList.toggle('d-none');
