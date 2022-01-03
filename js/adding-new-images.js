@@ -1,6 +1,6 @@
 
- 
-let path = (word) => `images\\gallery\\harris-visit\\${word}.jpg`
+ let folderName = "NewFolder";
+let path = (word) => `images\\gallery\\${folderName}\\${word}.jpg`
 
 const numbers = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight'];
 const letters = ['A', 'B', 'C', 'D'];

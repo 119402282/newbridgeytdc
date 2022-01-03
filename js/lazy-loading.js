@@ -1,0 +1,1 @@
+let imgArr = [...document.getElementsByTagName('img')];
