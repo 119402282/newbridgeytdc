@@ -155,7 +155,7 @@
 	<div class="jumbotron-fluid">
 		<img class="banner" src="images/banner.png" draggable="false" width="100%">
 		<img class="banner1 " src="images/banner1.png" draggable="false" width="100%">
-		<img class="banner2 d-none" src="images/banner2.png" width="100%">
+		<!-- <img class="banner2 d-none" src="images/banner2.png" width="100%"> -->
 	</div>
 	<nav class="navbar navbar-expand-lg navbar-dark">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -439,7 +439,7 @@
 				<label for="fullname" class="text-secondary">Full Name</label>
 			</div>
 			<div class="form-floating">
-				<input type="tel" name="phone" class="form-control" id="phone" placeholder="08X XXX XXXX" autocomplete="tel-national" required />
+				<input type="tel" name="phone" class="form-control" id="phone" pattern="((\+?\d{2,3}\s?\d\d\s?\d\d\d)|(\d\d\d(\s)?){2})\s?\d\d\d\d" placeholder="08X XXX XXXX" autocomplete="tel-national" required />
 				<label for="phone" class="text-left text-secondary">Mobile number</label>
 			</div>
 			<div class="col-auto">
