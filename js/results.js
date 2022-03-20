@@ -39,7 +39,7 @@ const app = (input) => {
         
         
 
-        if(btnControls.classList.length === 0){
+        if(btnControls.classList.length !==2){
             const deleteAll = document.createElement('button');
             deleteAll.setAttribute("id", "deleteAll");
             deleteAll.innerText = "Clear All Entries";
