@@ -21,7 +21,11 @@ const app = (input) => {
     } else if(input['data'].length > 0) {
         result.innerHTML = input['data'].map((row, index) =>{
             return `<tr>
-                        <form id="frm${index}" method="post" action="./../api/delete.php?action=one&phone=${encodeURI(row.phone)}&name=${encodeURI(row.phone)}">
+                        <form id="frm${index}" method="post" action="./../api/delete.php?${encodeURI({ 
+                            action: 'one',
+                            phone: row.phone,
+                            name: row.full_name 
+                        })}">
                             <td>${row.phone}</td>
                             <td>${row.full_name}</td>
                             <td><button type="submit" form="frm${index}" onclick="relTable()">Delete entry</button></td>
@@ -61,7 +65,7 @@ const app = (input) => {
 
 const deleteAllData = () => {
     fetch('./../api/delete.php?action=all').then((response) => {
-        
+
     }).finally(() => {
         reloadTbl();
     });
