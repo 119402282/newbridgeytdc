@@ -42,7 +42,10 @@ const app = (input) => {
         excel.innerText = "Export to Excel";
         excel.onclick = () => {
             $("#resultsTable").table2excel({
-                filename: "results.xls"
+                name: "survey",
+                exclude_inputs: true,
+                filename: "Results.xls", // do include extension
+                preserveColors: false 
             });
         }
 
@@ -57,8 +60,11 @@ const app = (input) => {
 }
 
 const deleteAllData = () => {
-    //fetch('./../api/delete.php?action=all');
-    reloadTbl();
+    fetch('./../api/delete.php?action=all').then((response) => {
+        
+    }).finally(() => {
+        reloadTbl();
+    });
 }
 
 const relTable = () => {
