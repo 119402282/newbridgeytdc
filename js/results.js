@@ -25,10 +25,10 @@ const app = (input) => {
                             action: 'one',
                             phone: row.phone,
                             name: row.full_name 
-                        })}">
+                        })}" >
                             <td>${row.phone}</td>
                             <td>${row.full_name}</td>
-                            <td><button type="submit" form="frm${index}" onclick="relTable()">Delete entry</button></td>
+                            <td><button type="submit" value="Submit" form="frm${index}" onclick="relTable()">Delete entry</button></td>
                         </form>
                     </tr>`;
         }).join('\n');

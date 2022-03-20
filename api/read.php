@@ -11,36 +11,39 @@
 
     $post = new Post($db);
 
-    if($_SESSION["skuser"]==="admin"){
-        $result = $post->read();
-        $num_rows = $result->rowCount();
+    if(isset($_SESSION['skuser'])){
+        if($_SESSION["skuser"]==="admin"){
+            $result = $post->read();
+            $num_rows = $result->rowCount();
 
-        if($num_rows>0){
-            $post_arr = array();
-            $post_arr['data'] = array();
+            if($num_rows>0){
+                $post_arr = array();
+                $post_arr['data'] = array();
 
-            while($row = $result->fetch(PDO::FETCH_ASSOC)){
-                extract($row);
-                $post_item = [
-                    'phone' => $phone,
-                    'full_name' => $full_name
-                ];
+                while($row = $result->fetch(PDO::FETCH_ASSOC)){
+                    extract($row);
+                    $post_item = [
+                        'phone' => $phone,
+                        'full_name' => $full_name
+                    ];
 
-                array_push($post_arr['data'], $post_item);
+                    array_push($post_arr['data'], $post_item);
+                }
+
+                echo json_encode($post_arr);
+        
+            } else {
+
+                echo json_encode([
+                    'message' => 'No posts found!'
+                ]);
+
             }
-
-            echo json_encode($post_arr);
-
-        } else {
-
-            echo json_encode([
-                'message' => 'No posts found!'
-            ]);
-
         }
     } elseif($_POST["username"] === "n580414" && $_POST["password"] === "OUj10-A5;Q3ufc"){
         $result = $post->read();
-        $_SESSION["skuser"] = "admin";
+        session_start();
+        $_SESSION["skuser"]="admin";
         $num_rows = $result->rowCount();
 
         if($num_rows>0){

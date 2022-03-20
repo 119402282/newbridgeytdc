@@ -23,13 +23,13 @@
             if($post->delete()){
                 echo json_encode(['message'=> 'Data successfully deleted']);
             }else{
-                echo json_encode(['message'=> 'Failed to delete record. Please email youthbridge2016@gmail.com to request manual data deletion.']);
+                echo json_encode(['message'=> 'Failed to delete record. Please email h.cullen@pm.me to request manual data deletion.']);
             };
         } elseif($_POST["action"]==="all"){
             if($post->deleteAll()){
                 echo json_encode(['message'=> 'Data successfully deleted']);
             }else{
-                echo json_encode(['message'=> 'Failed to delete record. Please email youthbridge2016@gmail.com to request manual data deletion.']);
+                echo json_encode(['message'=> 'Failed to delete record. Please email h.cullen@pm.me to request manual data deletion.']);
             };
         }
     }
