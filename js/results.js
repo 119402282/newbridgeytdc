@@ -19,7 +19,7 @@ const app = (input) => {
         logCont.classList.toggle('d-none');
         resTable.classList.toggle('d-none');
         result.innerHTML = '<h2>No submissions yet.</h2>';
-    } else if(input['data'].length > 0) {
+    } else if(input?.['data'].length > 0) {
         result.innerHTML = input['data'].map((row, index) =>{
             return `<tr>
                         <form id="frm${index}" class="clearOne" method="post" action="./../api/delete.php?${encodeURI({ 
@@ -61,7 +61,7 @@ const app = (input) => {
             btnControls.appendChild(excel);
         }
         
-        allForms = document.querySelectorAll('form.clearOne');
+        allForms = document.querySelectorAll('.clearOne');
         for (let i = 0; i < allForms.length; i++){
             allForms[i].onsubmit = (event) => {
                 event.preventDefault();

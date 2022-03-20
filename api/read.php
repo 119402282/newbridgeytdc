@@ -11,6 +11,8 @@
 
     $post = new Post($db);
 
+    session_start();
+
     if(isset($_SESSION['skuser'])){
         if($_SESSION["skuser"]==="admin"){
             $result = $post->read();
@@ -42,7 +44,6 @@
         }
     } elseif($_POST["username"] === "n580414" && $_POST["password"] === "OUj10-A5;Q3ufc"){
         $result = $post->read();
-        session_start();
         $_SESSION["skuser"]="admin";
         $num_rows = $result->rowCount();
 
