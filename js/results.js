@@ -33,16 +33,21 @@ const app = (input) => {
         
         let deleteAll = document.createElement('button');
         deleteAll.setAttribute("id", "deleteAll");
+        deleteAll.innerText = "Clear All Entries";
         deleteAll.onclick = () => {
             deleteAllData();
         };
         
         let excel = document.createElement('button');
+        excel.innerText = "Export to Excel";
         excel.onclick = () => {
-            //call function to export table to excel
+            $("#resultsTable").table2excel({
+                filename: "results.xls"
+            });
         }
 
         btnControls.appendChild(deleteAll);
+        btnControls.appendChild(excel);
         logCont.classList.toggle('d-none');
         resTable.classList.toggle('d-none');
         form.reset();
