@@ -13,8 +13,6 @@
     $db = $database->connect();
     $post = new Post($db);
 
-    // $_GET['']
-    $data = json_decode(file_get_contents('php://input'));
 
     if($_SESSION["skuser"]==="admin"){
         if($_POST["action"]==="one"){

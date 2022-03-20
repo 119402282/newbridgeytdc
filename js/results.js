@@ -6,6 +6,7 @@ let resTable = document.getElementById('resultsTable');
 let result = document.querySelector('tbody');
 let foot = document.querySelector('tfoot td');
 let btnControls = document.getElementById('btnControls');
+let allForms;
 const app = (input) => {
     
     let {message} = input;
@@ -21,14 +22,15 @@ const app = (input) => {
     } else if(input['data'].length > 0) {
         result.innerHTML = input['data'].map((row, index) =>{
             return `<tr>
-                        <form id="frm${index}" method="post" action="./../api/delete.php?${encodeURI({ 
+                        <form id="frm${index}" class="clearOne" method="post" action="./../api/delete.php?${encodeURI({ 
                             action: 'one',
                             phone: row.phone,
                             name: row.full_name 
-                        })}" >
-                            <td>${row.phone}</td>
-                            <td>${row.full_name}</td>
-                            <td><button type="submit" value="Submit" form="frm${index}" onclick="relTable()">Delete entry</button></td>
+                        })}" >${
+                            `<td>${row.phone}</td>`+
+                            `<td>${row.full_name}</td>`+
+                            `<td><button type="submit" value="Submit" form="frm${index}" >Delete entry</button></td>`
+                        }
                         </form>
                     </tr>`;
         }).join('\n');
@@ -55,9 +57,23 @@ const app = (input) => {
 
         btnControls.appendChild(deleteAll);
         btnControls.appendChild(excel);
+
+        allForms = document.querySelectorAll('form.clearOne');
+        for (let i = 0; i < allForms.length; i++){
+            allForms[i].onsubmit = (event) => {
+                event.preventDefault();
+                let datafiedURL =allForms[i].getAttribute('action');
+                // fetch(datafiedURL).then((response) => {
+
+                // }).finally(() => {
+                //     relTable();
+                // });
+            }
+        }
         logCont.classList.toggle('d-none');
         resTable.classList.toggle('d-none');
         form.reset();
+        
     }
 
 
@@ -67,7 +83,7 @@ const deleteAllData = () => {
     fetch('./../api/delete.php?action=all').then((response) => {
 
     }).finally(() => {
-        reloadTbl();
+        relTbl();
     });
 }
 
