@@ -61,7 +61,7 @@ const app = (input) => {
             btnControls.appendChild(excel);
         }
         
-        allForms = document.querySelectorAll('.clearOne');
+        allForms = document.querySelectorAll('form.clearOne');
         for (let i = 0; i < allForms.length; i++){
             allForms[i].onsubmit = (event) => {
                 event.preventDefault();
