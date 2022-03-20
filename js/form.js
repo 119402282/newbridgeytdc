@@ -11,26 +11,6 @@ const app = (input) => {
 
     //Write your code based on responses here
     survey.classList.toggle('d-none');
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

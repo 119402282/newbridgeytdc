@@ -59,16 +59,23 @@
             return false;
     
         }
+
+        public function deleteAll() {
+            $query = 'DELETE FROM  ' . $this->table; 
+            $stmt = $this->conn->prepare($query);
+            if($stmt->execute()){
+                return true;
+            }  
+            // printf("Error: %s .\n", $stmt->error_log());
+            return false;
+    
+        }
+
         public function delete() {
             $query = 'DELETE FROM ' . $this->table . ' WHERE phone = ? AND full_name = ?';
             $this->phone = htmlspecialchars(strip_tags($this->phone));
             $this->full_name = htmlspecialchars(strip_tags($this->full_name));
-    
-            // $illegals = ['1','*', ' ', '', 'null', 'TRUE', 'true', 'True'];
-    
-            // if(in_array($this->phone, $illegals) OR in_array($this->full_name, $illegals)){
-            //     return false;
-            // }
+
             $stmt = $this->conn->prepare($query);
             $stmt->bindParam(1, $this->phone);
             $stmt->bindParam(2, $this->full_name);

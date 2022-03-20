@@ -15,11 +15,23 @@
 
     // $_GET['']
     $data = json_decode(file_get_contents('php://input'));
-    $post->phone = $data['phone'];
-    $post->fullname = $data['fullname'];
-    if($post->delete()){
-        echo json_encode(['message'=> 'Data successfully deleted']);
-    }else{
-        echo json_encode(['message'=> 'Failed to delete record. Please email youthbridge2016@gmail.com to request manual data deletion.']);
-    };
+
+    if($_SESSION["skuser"]==="admin"){
+        if($_POST["action"]==="one"){
+            $post->phone = $_POST['phone'];
+            $post->fullname = $_POST['name'];
+            if($post->delete()){
+                echo json_encode(['message'=> 'Data successfully deleted']);
+            }else{
+                echo json_encode(['message'=> 'Failed to delete record. Please email youthbridge2016@gmail.com to request manual data deletion.']);
+            };
+        } elseif($_POST["action"]==="all"){
+            if($post->deleteAll()){
+                echo json_encode(['message'=> 'Data successfully deleted']);
+            }else{
+                echo json_encode(['message'=> 'Failed to delete record. Please email youthbridge2016@gmail.com to request manual data deletion.']);
+            };
+        }
+    }
+
 ?>
