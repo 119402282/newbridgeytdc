@@ -37,37 +37,40 @@ const app = (input) => {
         console.table(input['data']);
         foot.innerHTML = "Total Responses: " + input['data'].length;
         
-        let deleteAll = document.createElement('button');
-        deleteAll.setAttribute("id", "deleteAll");
-        deleteAll.innerText = "Clear All Entries";
-        deleteAll.onclick = () => {
-            deleteAllData();
-        };
         
-        let excel = document.createElement('button');
-        excel.innerText = "Export to Excel";
-        excel.onclick = () => {
-            $("#resultsTable").table2excel({
-                name: "survey",
-                exclude_inputs: true,
-                filename: "Results.xls", // do include extension
-                preserveColors: false 
-            });
+
+        if(btnControls.classList.length === 0){
+            const deleteAll = document.createElement('button');
+            deleteAll.setAttribute("id", "deleteAll");
+            deleteAll.innerText = "Clear All Entries";
+            deleteAll.onclick = () => {
+                deleteAllData();
+            };
+            
+            const excel = document.createElement('button');
+            excel.innerText = "Export to Excel";
+            excel.onclick = () => {
+                $("#resultsTable").table2excel({
+                    name: "survey",
+                    exclude_inputs: true,
+                    filename: "Results.xls", // do include extension
+                    preserveColors: false 
+                });
+            }
+            btnControls.appendChild(deleteAll);
+            btnControls.appendChild(excel);
         }
-
-        btnControls.appendChild(deleteAll);
-        btnControls.appendChild(excel);
-
+        
         allForms = document.querySelectorAll('form.clearOne');
         for (let i = 0; i < allForms.length; i++){
             allForms[i].onsubmit = (event) => {
                 event.preventDefault();
                 let datafiedURL =allForms[i].getAttribute('action');
-                // fetch(datafiedURL).then((response) => {
+                fetch(datafiedURL).then((response) => {
 
-                // }).finally(() => {
-                //     relTable();
-                // });
+                }).finally(() => {
+                    relTable();
+                });
             }
         }
         logCont.classList.toggle('d-none');
