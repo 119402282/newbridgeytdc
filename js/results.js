@@ -57,7 +57,7 @@ const app = (input) => {
 }
 
 const deleteAllData = () => {
-    await fetch('./../api/delete.php?action=all');
+    //fetch('./../api/delete.php?action=all');
     reloadTbl();
 }
 
