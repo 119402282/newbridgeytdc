@@ -72,7 +72,7 @@
     } else {
 
         echo json_encode([
-            'message' => 'Login failed!' . $_SESSION['skuser']
+            'message' => 'Login failed!' . ($_SESSION["skuser"] || 'empty')
         ]);
         
     }

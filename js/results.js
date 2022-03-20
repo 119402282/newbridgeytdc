@@ -91,7 +91,7 @@ const deleteAllData = () => {
 }
 
 const relTable = () => {
-    setTimeout(reloadTbl, 750);
+    setTimeout(reloadTbl, 100);
 }
 function reloadTbl() {
     postHTTP( undefined, urlPattern).then( message => {
