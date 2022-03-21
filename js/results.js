@@ -31,7 +31,11 @@ const app = (input) => {
                                 action: 'one',
                                 phone: row.phone,
                                 name: row.full_name 
-                            })}" >${
+                            })}" >
+                                <input form="frm${index}" type="hidden" name="action" value="one" />
+                                <input form="frm${index}" type="hidden" name="phone" value="${row.phone}"/>
+                                <input form="frm${index}" type="hidden" name="name" value="${row.full_name}"/>
+                            ${
                                 `<td>${row.phone}</td>`+
                                 `<td>${row.full_name}</td>`+
                                 `<td><button type="submit" value="Submit" form="frm${index}" >Delete entry</button></td>`
