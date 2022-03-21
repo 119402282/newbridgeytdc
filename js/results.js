@@ -39,7 +39,6 @@ const app = (input) => {
                             </form>
                         </tr>`;
             }).join('\n');
-            console.table(input['data']);
             foot.innerHTML = "Total Responses: " + input['data'].length;
 
             if(btnControls.childNodes.length <2){
@@ -74,7 +73,7 @@ const app = (input) => {
                     const message = await response.json();
                     console.log(await message);
                     relTable();
-                    ;
+                    
                 }
             }
             logCont.classList.toggle('d-none');
