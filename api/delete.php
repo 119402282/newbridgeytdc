@@ -18,12 +18,12 @@
     session_start();
 
 
-    $posted = file_get_contents('php://input');
-    $stwing = $posted;
+    // $posted = file_get_contents('php://input');
+    // $stwing = $posted;
 
     if($_SESSION["skuser"]==="admin"){
         
-        echo json_encode(['message'=> $stwing]);
+        // echo json_encode(['message'=> $stwing]);
         if($_POST["action"]==="one"){
             $post->phone = $_POST['phone'];
             $post->fullname = $_POST['name'];
