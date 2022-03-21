@@ -23,7 +23,7 @@
 
     if($_SESSION["skuser"]==="admin"){
         
-        // echo json_encode(['message'=> $stwing]);
+        echo json_encode(['message'=> $_POST['phone'] . $_POST['name'] ]);
         if($_POST["action"]==="one"){
             $post->phone = $_POST['phone'];
             $post->fullname = $_POST['name'];
