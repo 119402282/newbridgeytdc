@@ -73,12 +73,16 @@ const app = (input) => {
                         method: 'POST', // or 'PUT'
                         headers: {
                             'Content-Type': 'application/x-www-form-urlencoded'
-                        }
+                        },
+                        body: encodeURI(new FormData(allForms[i]))
                     });
                     const message = await response.json();
                     console.log(await message);
                     relTable();
                     
+                }
+                allForms[i].onreset = (event)=>{
+                    event.preventDefault();
                 }
             }
             logCont.classList.toggle('d-none');
@@ -94,7 +98,8 @@ const deleteAllData = async () => {
         method: 'POST', // or 'PUT'
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
-        }
+        },
+        body: encodeURI({action: 'all'})
     });
     const message = await response.json();
     console.log(await message);
