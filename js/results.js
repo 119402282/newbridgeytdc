@@ -21,6 +21,7 @@ const app = (input) => {
             logCont.classList.add('d-none');
             resTable.classList.remove('d-none');
             result.innerHTML = '<h2>No submissions yet.</h2>';
+            foot.classList.toggle('d-none');
         }
     }
     if(data){
