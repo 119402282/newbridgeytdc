@@ -72,17 +72,21 @@
         }
 
         public function delete() {
-            $query = 'DELETE FROM ' . $this->table . ' WHERE phone = ? AND full_name = ?';
-            $this->phone = htmlspecialchars(strip_tags($this->phone));
-            $this->full_name = htmlspecialchars(strip_tags($this->full_name));
 
-            $stmt = $this->conn->prepare($query);
-            $stmt->bindParam(1, $this->phone);
-            $stmt->bindParam(2, $this->full_name);
+            $query = 'DELETE FROM ' . $this->table . ' WHERE phone = ? AND full_name = ?';
+
+            $this->phone = htmlspecialchars(filter_var(strip_tags($this->phone), FILTER_SANITIZE_STRING));
+            $this->full_name = htmlspecialchars(filter_var(strip_tags($this->full_name), FILTER_SANITIZE_STRING));
+            if($this->full_name && $this->phone){
+                $stmt = $this->conn->prepare($query);
+                $stmt->bindParam(1, $this->phone);
+                $stmt->bindParam(2, $this->full_name);
     
-            if($stmt->execute){
-                return true;
+                if($stmt->execute()){
+                    return true;
+                }    
             }
+            
             return false;
     
         }
