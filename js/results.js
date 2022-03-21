@@ -69,14 +69,10 @@ const app = (input) => {
                 allForms[i].onsubmit = (event) => {
                     event.preventDefault();
                     let datafiedURL =allForms[i].getAttribute('action');
-                    fetch(datafiedURL).then((response) => {
-                        return response;
-                    }).then( (message) => {
-                        console.log(message);
-                    }
-                    ).finally(() => {
-                        relTable();
-                    });
+                    const results = await fetch(datafiedURL);
+                    console.log(results);
+                    relTable();
+                    ;
                 }
             }
             logCont.classList.toggle('d-none');
@@ -88,11 +84,9 @@ const app = (input) => {
 }
 
 const deleteAllData = () => {
-    fetch('./../api/delete.php?action=all').then((response) => {
-
-    }).finally(() => {
-        relTbl();
-    });
+    const results = await fetch('./../api/delete.php?action=all');
+    console.log(results);
+    relTbl();
 }
 
 const relTable = () => {
