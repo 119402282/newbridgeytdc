@@ -69,10 +69,15 @@ const app = (input) => {
                     event.preventDefault();
                     let datafiedURL =allForms[i].getAttribute('action');
 
-                    const response = await fetch(datafiedURL);
+                    const response = await fetch(datafiedURL, {
+                        method: 'POST', // or 'PUT'
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded'
+                        }
+                    });
                     const message = await response.json();
                     console.log(await message);
-                    //relTable();
+                    relTable();
                     
                 }
             }
@@ -85,7 +90,12 @@ const app = (input) => {
 }
 
 const deleteAllData = async () => {
-    const response = await fetch('./../api/delete.php?action=all');
+    const response = await fetch('./../api/delete.php?action=all', {
+        method: 'POST', // or 'PUT'
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        }
+    });
     const message = await response.json();
     console.log(await message);
     relTbl();
