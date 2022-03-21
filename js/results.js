@@ -66,7 +66,7 @@ const app = (input) => {
             
             allForms = document.querySelectorAll('form.clearOne');
             for (let i = 0; i < allForms.length; i++){
-                allForms[i].onsubmit = (event) => {
+                allForms[i].onsubmit = async (event) => {
                     event.preventDefault();
                     let datafiedURL =allForms[i].getAttribute('action');
                     const results = await fetch(datafiedURL);
@@ -83,7 +83,7 @@ const app = (input) => {
     }
 }
 
-const deleteAllData = () => {
+const deleteAllData = async () => {
     const results = await fetch('./../api/delete.php?action=all');
     console.log(results);
     relTbl();
