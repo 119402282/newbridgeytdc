@@ -27,11 +27,7 @@ const app = (input) => {
         if(data.length > 0) {
             result.innerHTML = input['data'].map((row, index) =>{
                 return `<tr>
-                            <form id="frm${index}" class="clearOne" method="post" action="./../api/delete.php?${encodeURI({ 
-                                action: 'one',
-                                phone: row.phone,
-                                name: row.full_name 
-                            })}" >
+                            <form id="frm${index}" class="clearOne" method="post" action="./../api/delete.php" >
                                 <input form="frm${index}" type="hidden" name="action" value="one" />
                                 <input form="frm${index}" type="hidden" name="phone" value="${row.phone}"/>
                                 <input form="frm${index}" type="hidden" name="name" value="${row.full_name}"/>
