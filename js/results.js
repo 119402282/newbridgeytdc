@@ -41,10 +41,8 @@ const app = (input) => {
             }).join('\n');
             console.table(input['data']);
             foot.innerHTML = "Total Responses: " + input['data'].length;
-            
-            
 
-            if(btnControls.classList.length !==2){
+            if(btnControls.childNodes.length <2){
                 const deleteAll = document.createElement('button');
                 deleteAll.setAttribute("id", "deleteAll");
                 deleteAll.innerText = "Clear All Entries";
