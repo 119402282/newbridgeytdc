@@ -22,11 +22,11 @@
         
         if($_POST["action"]==="one"){
             $post->phone = $_POST['phone'];
-            $post->fullname = $_POST['name'];
+            $post->full_name = $_POST['name'];
             if($post->delete()){
                 echo json_encode(['message'=> 'Data successfully deleted']);
             }else{
-                echo json_encode(['message'=> 'Failed to delete record. Please email h.cullen@pm.me to request manual data deletion.']);
+                echo json_encode(['message'=> 'Failed to delete record. '.' Please email h.cullen@pm.me to request manual data deletion.']);
             };
         } elseif($_POST["action"]==="all"){
             if($post->deleteAll()){
