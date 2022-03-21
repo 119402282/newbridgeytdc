@@ -69,8 +69,10 @@ const app = (input) => {
                 allForms[i].onsubmit = async (event) => {
                     event.preventDefault();
                     let datafiedURL =allForms[i].getAttribute('action');
-                    const results = await fetch(datafiedURL);
-                    console.log(results);
+
+                    const response = await fetch(datafiedURL);
+                    const message = await response.json();
+                    console.log(await message);
                     relTable();
                     ;
                 }
@@ -84,8 +86,9 @@ const app = (input) => {
 }
 
 const deleteAllData = async () => {
-    const results = await fetch('./../api/delete.php?action=all');
-    console.log(results);
+    const response = await fetch('./../api/delete.php?action=all');
+    const message = await response.json();
+    console.log(await message);
     relTbl();
 }
 
