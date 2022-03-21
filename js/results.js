@@ -11,7 +11,7 @@ const app = (input) => {
     
     let {message} = input;
     //Write your code based on responses here
-    if(message === "Login failed!"){
+    if(message !== "No posts found!" && message.length > 0) {
         form.reset();
         alert(message);
         form.reset();
