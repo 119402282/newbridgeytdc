@@ -35,7 +35,7 @@ const app = (input) => {
                             ${
                                 `<td>${row.phone}</td>`+
                                 `<td>${row.full_name}</td>`+
-                                `<td><button type="submit" value="Submit" form="frm${index}" >Delete entry</button></td>`
+                                `<td><button class="btn btn-secondary" type="submit" value="Submit" form="frm${index}" >Delete entry</button></td>`
                             }
                             </form>
                         </tr>`;
@@ -45,6 +45,9 @@ const app = (input) => {
             if(btnControls.childNodes.length <2){
                 const deleteAll = document.createElement('button');
                 deleteAll.setAttribute("id", "deleteAll");
+                deleteAll.classList.add('btn');
+                deleteAll.classList.add('btn-warning');
+
                 deleteAll.innerText = "Clear All Entries";
                 deleteAll.onclick = () => {
                     deleteAllData();
@@ -52,6 +55,8 @@ const app = (input) => {
                 
                 const excel = document.createElement('button');
                 excel.innerText = "Export to Excel";
+                excel.classList.add('btn');
+                excel.classList.add('btn-success');
                 excel.onclick = () => {
                     $("#resultsTable").table2excel({
                         name: "survey",
