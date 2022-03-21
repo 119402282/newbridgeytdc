@@ -70,10 +70,11 @@ const app = (input) => {
                     event.preventDefault();
                     let datafiedURL =allForms[i].getAttribute('action');
                     fetch(datafiedURL).then((response) => {
-                        response.then(message => {
-                            console.log(message);
-                        });
-                    }).finally(() => {
+                        return toJson(response);
+                    }).then( (message) => {
+                        console.log(message);
+                    }
+                    ).finally(() => {
                         relTable();
                     });
                 }
