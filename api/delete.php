@@ -13,7 +13,7 @@
     $db = $database->connect();
     $post = new Post($db);
 
-
+    session_start();
 
     if(true){
         echo json_encode(['message'=> 'Data successfully '.$_SESSION["skuser"] .'deleted']);
