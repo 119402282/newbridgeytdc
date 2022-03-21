@@ -1,6 +1,7 @@
 <?php
-    
+
     ini_set("include_path", '/home/n580414/php:' . ini_get("include_path") );
+
     header('Access-Control-Allow-Origin: *');
     header('Content-Type: application/x-www-form-urlencoded');
     header('Access-Control-Allow-Methods: POST');
@@ -9,13 +10,20 @@
     include_once '../classes/Post.php';
     include_once '../classes/Database.php';
 
+
     $database = new Database();
     $db = $database->connect();
     $post = new Post($db);
 
     session_start();
 
+
+    $posted = file_get_contents('php://input');
+    $stwing = $posted;
+
     if($_SESSION["skuser"]==="admin"){
+        
+        echo json_encode(['message'=> $stwing]);
         if($_POST["action"]==="one"){
             $post->phone = $_POST['phone'];
             $post->fullname = $_POST['name'];
