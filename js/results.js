@@ -27,7 +27,7 @@ const app = (input) => {
         if(data.length > 0) {
             result.innerHTML = input['data'].map((row, index) =>{
                 return `<tr>
-                            <form id="frm${index}" class="clearOne" method="post" action="./../api/delete.php" >
+                            <form id="frm${index}" class="clearOne" method="post">
                                 <input form="frm${index}" type="hidden" name="action" value="one" />
                                 <input form="frm${index}" type="hidden" name="phone" value="${row.phone}"/>
                                 <input form="frm${index}" type="hidden" name="name" value="${row.full_name}"/>
@@ -67,7 +67,7 @@ const app = (input) => {
             for (let i = 0; i < allForms.length; i++){
                 allForms[i].onsubmit = async (event) => {
                     event.preventDefault();
-                    let datafiedURL =allForms[i].getAttribute('action');
+                    let datafiedURL ='./../api/delete.php';
 
                     const response = await fetch(datafiedURL, {
                         method: 'POST', // or 'PUT'
@@ -103,7 +103,7 @@ const deleteAllData = async () => {
     });
     const message = await response.json();
     console.log(await message);
-    relTbl();
+    relTable();
 }
 
 const relTable = () => {
