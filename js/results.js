@@ -72,7 +72,7 @@ const app = (input) => {
                     const response = await fetch(datafiedURL);
                     const message = await response.json();
                     console.log(await message);
-                    relTable();
+                    //relTable();
                     
                 }
             }
