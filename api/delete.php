@@ -15,12 +15,6 @@
 
     session_start();
 
-    if(true){
-        echo json_encode(['message'=> 'Data successfully '.$_SESSION["skuser"] .'deleted']);
-    }else{
-        echo json_encode(['message'=> 'Failed to delete record. Please email h.cullen@pm.me to request manual data deletion.']);
-    };
-
     if($_SESSION["skuser"]==="admin"){
         if($_POST["action"]==="one"){
             $post->phone = $_POST['phone'];
