@@ -70,7 +70,7 @@ const app = (input) => {
                     event.preventDefault();
                     let datafiedURL =allForms[i].getAttribute('action');
                     fetch(datafiedURL).then((response) => {
-                        return response.json;
+                        return response;
                     }).then( (message) => {
                         console.log(message);
                     }
