@@ -26,7 +26,7 @@
             if($post->delete()){
                 echo json_encode(['message'=> 'Data successfully deleted']);
             }else{
-                echo json_encode(['message'=> 'Failed to delete record. '.' Please email h.cullen@pm.me to request manual data deletion.']);
+                echo json_encode(['message'=> 'Failed to delete record. '. $post->full_name . $post->phone . ' Please email h.cullen@pm.me to request manual data deletion.']);
             };
         } elseif($_POST["action"]==="all"){
             if($post->deleteAll()){
