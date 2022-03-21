@@ -17,9 +17,6 @@
 
     session_start();
 
-
-
-    echo json_encode(['message'=> ' '.($_POST['phone'] . $_POST['name']).'.' ]);
     if($_SESSION["skuser"]==="admin"){
         
         
