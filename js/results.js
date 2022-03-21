@@ -18,6 +18,7 @@ const app = (input) => {
             alert(message);
             form.reset();
         } else if (message === "No posts found!") {
+            btnControls.classList.add('d-none');
             logCont.classList.add('d-none');
             resTable.classList.remove('d-none');
             result.innerHTML = '<h2>No submissions yet.</h2>';
@@ -91,6 +92,7 @@ const app = (input) => {
                     event.preventDefault();
                 }
             }
+            btnControls.classList.remove('d-none');
             logCont.classList.add('d-none');
             resTable.classList.remove('d-none');
             form.reset();
