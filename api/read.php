@@ -32,10 +32,7 @@
                     array_push($post_arr['data'], $post_item);
                 }
 
-                // echo json_encode($post_arr);
-                echo json_encode([
-                    'message' => 'Login failed!' . ($_SESSION["skuser"] || 'empty')
-                ]);
+                echo json_encode($post_arr);
         
             } else {
 
@@ -64,10 +61,7 @@
                 array_push($post_arr['data'], $post_item);
             }
 
-            // echo json_encode($post_arr);
-            echo json_encode([
-                'message' => 'Login failed!' . ($_SESSION["skuser"] || 'empty')
-            ]);
+            echo json_encode($post_arr);
 
         } else {
 
@@ -79,7 +73,7 @@
     } else {
 
         echo json_encode([
-            'message' => 'Login failed!' . ($_SESSION["skuser"] || 'empty')
+            'message' => 'Login failed!'
         ]);
         
     }
