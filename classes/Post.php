@@ -15,7 +15,7 @@
         }
     
         public function read() {
-            $query = 'SELECT DISTINCT(Phone as phone, Full_Name as full_name) FROM ' . $this->table;
+            $query = 'SELECT DISTINCT Phone as phone,Full_Name as full_name FROM ' . $this->table;
         
             $stmt = $this->conn->prepare($query);
     
