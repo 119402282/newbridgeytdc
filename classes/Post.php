@@ -15,7 +15,7 @@
         }
     
         public function read() {
-            $query = 'SELECT Phone as phone, Full_Name as full_name FROM ' . $this->table;
+            $query = 'SELECT DISTINCT(Phone as phone, Full_Name as full_name) FROM ' . $this->table;
         
             $stmt = $this->conn->prepare($query);
     
@@ -24,7 +24,7 @@
         }
     
         public function readSingle($id) {
-            $query = 'SELECT * FROM ' . $this->table . ' WHERE PHONE = ? LIMIT 1';
+            $query = 'SELECT DISTINCT * FROM ' . $this->table . ' WHERE PHONE = ? LIMIT 1';
     
     
         
